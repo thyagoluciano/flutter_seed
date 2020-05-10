@@ -50,3 +50,5 @@ google-services.json
 
 ios/config/**/*.plist
 android/src/**/*.plist
+
+flavor_flutter_tutorial.md
