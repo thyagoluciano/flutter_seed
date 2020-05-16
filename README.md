@@ -54,3 +54,10 @@ This project flavor is basead in: https://bit.ly/2LtU4xD
     - Android: Change icon:
         - android/src/dev/res
         - android/src/prod/res
+
+
+
+
+## DDD
+
+### Freezed : flutter pub run build_runner watch
