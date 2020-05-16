@@ -21,6 +21,9 @@ dependencies:
   firebase_database: ^3.1.5
   cloud_firestore: ^0.13.5
 
+  # Injectable is a convenient code generator for get_it. Inspired by Angular DI, Guice DI and inject.dart.
+  injectable: ^0.4.0
+
   # Functional programming in Dart
   dartz: ^0.9.1
 
@@ -41,6 +44,7 @@ dev_dependencies:
   # Freezed 
   build_runner:
   freezed: ^0.10.8
+  injectable_generator: ^0.4.0
 
 flutter_icons:
   android: "ic_launcher"
