@@ -20,6 +20,7 @@ dependencies:
   firebase_auth: ^0.16.0
   firebase_database: ^3.1.5
   cloud_firestore: ^0.13.5
+  google_sign_in: ^4.4.6
 
   # Injectable is a convenient code generator for get_it. Inspired by Angular DI, Guice DI and inject.dart.
   injectable: ^0.4.0
@@ -35,16 +36,31 @@ dependencies:
   # Code generation for immutable classes that has a simple syntax/API without compromising on the features.
   freezed_annotation: ^0.7.1
 
+  # AutoRoute is a route generation library, where everything needed for navigation is automatically generated for you.
+  auto_route: ^0.5.0
+
+  # This is a simple Service Locator for Dart and Flutter projects with some additional goodies highly inspired by Splat. 
+  get_it: ^4.0.2
+
+  # This project is a port of Kotlin's Kotlin Standard library for Dart/Flutter projects.
+  kt_dart: ^0.7.0+1
+
+  flushbar:
+    git:
+      url: https://github.com/valterh4ck3r/flushbar.git
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_launcher_icons: ^0.7.5
   
-  # Freezed 
-  build_runner:
   freezed: ^0.10.8
   injectable_generator: ^0.4.0
+  auto_route_generator: ^0.5.0
+  # Freezed 
+  build_runner:
+  
 
 flutter_icons:
   android: "ic_launcher"
