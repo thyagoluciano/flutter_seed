@@ -1,0 +1,434 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Firebase Android (Login Google) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="flavor.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introdução
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="flavor.html">
+            
+                <a href="flavor.html">
+            
+                    
+                    Flavor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="firebase_android.html">
+            
+                <a href="firebase_android.html">
+            
+                    
+                    Firebase Android (Login Google)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Firebase Android (Login Google)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="configurar-firebase">Configurar Firebase</h1>
+<p>Para criar um novo projeto Firebase, &#xE9; necess&#xE1;rio acessar este <a href="https://console.firebase.google.com" target="_blank">Link</a>.</p>
+<ol>
+<li><p>Clica em <strong>Adicionar Projeto</strong> para criar um novo projeto.</p>
+<p> <img src="assets/01_novo_projeto.png" alt=""></p>
+</li>
+<li><p>Insira o <strong>Nome do Projeto</strong></p>
+<p> <img src="assets/02_novo_projeto_passo_1.png" alt=""></p>
+</li>
+<li><p>Habilitar ou n&#xE3;o o uso do <strong>Google Analytics</strong></p>
+<p> <img src="assets/03_novo_projeto_passo_2.png" alt=""></p>
+</li>
+<li><p>Caso tenha habilitado cadastrar uma nova conta do Google Analytics ou escolher uma j&#xE1; existente</p>
+<p> <img src="assets/04_novo_projeto_passo_3.png" alt=""></p>
+</li>
+<li><p>Aguarde a cria&#xE7;&#xE3;o ser conclu&#xED;da e clique em <strong>Continuar</strong></p>
+<p> <img src="assets/05_novo_projeto_passo_4.png" alt=""></p>
+</li>
+<li><p>Isso levar&#xE1; voc&#xEA; a <strong>P&#xE1;gina do Projeto</strong>. A partir daqui, voc&#xEA; poder&#xE1; adicionar o <strong>Firebase</strong> ao seu projeto <strong>Flutter</strong></p>
+</li>
+</ol>
+<h2 id="configura&#xE7;&#xE3;o-do-android">Configura&#xE7;&#xE3;o do Android</h2>
+<ol>
+<li>Clique no <strong>&#xED;cone do Android</strong></li>
+<li><p>Neste formul&#xE1;rio, voc&#xEA; deve primeiro inserir o <strong>Nome do Pacote Android</strong>. Voc&#xEA; pode obter o nome do pacote no arquivo <strong>AndroidManifest.xml</strong> que fica dentro do diret&#xF3;rio <strong>Android &#x2192; app &#x2192; src &#x2192; main &#x2192; AndroidManifest.xml</strong></p>
+<pre><code class="lang-xml"> <span class="hljs-tag">&lt;<span class="hljs-name">manifest</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+ <span class="hljs-attr">package</span>=<span class="hljs-string">&quot;br.com.seupacote.teste&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.INTERNET&quot;</span>/&gt;</span>
+
+     <span class="hljs-tag">&lt;<span class="hljs-name">application</span>
+         <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;io.flutter.app.FlutterApplication&quot;</span>
+         <span class="hljs-attr">android:label</span>=<span class="hljs-string">&quot;@string/app_name&quot;</span>
+         <span class="hljs-attr">android:icon</span>=<span class="hljs-string">&quot;@mipmap/ic_launcher&quot;</span>&gt;</span>
+
+         ...
+     <span class="hljs-tag">&lt;/<span class="hljs-name">application</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">manifest</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>Em seguida voc&#xEA; pode inserir um <strong>Apelido do aplicativo</strong>, que &#xE9; opcional.</p>
+<p> <img src="assets/06_novo_projeto_passo_5.png" alt=""></p>
+</li>
+</ol>
+<ol>
+<li><p>Voc&#xEA; deve inserir o hash <strong>SHA-1</strong> Passe o mouse sobre a ajuda (?) E clique em Ver esta p&#xE1;gina . Isso o levar&#xE1; &#xE0; p&#xE1;gina <strong>Autenticando seu cliente</strong> mas b&#xE1;sicamente voc&#xEA; deve fazer os passos abaixo.</p>
+<ul>
+<li><p>Gerar o arquivo <strong>app-teste-debug.keystore</strong></p>
+<pre><code class="lang-bash">  keytool -genkey -v -keystore app-teste-debug.keystore -alias app-teste-debug -keyalg RSA -keysize 2048 -validity 10000
+</code></pre>
+<p>  <img src="assets/configurar_keystore.png" alt=""></p>
+</li>
+<li><p>Gerar o <strong>hash SHA-1</strong></p>
+<pre><code class="lang-bash">  keytool -list -v -alias app-teste-debug -keystore app-teste-debug.keystore
+</code></pre>
+<p>  <img src="assets/gerar_sha1.png" alt=""></p>
+</li>
+<li><p>Copiar o Valor <strong>SHA1</strong> e clicar em Registrar app</p>
+<p>  <img src="assets/06_novo_projeto_passo_6.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>A segunda etapa do processo e fazer o download do arquivo <strong>google-services.json</strong> e simplesmente arrastar e soltar no diret&#xF3;rio do projeto <strong>Android &#x2192; app &#x2192; src &#x2192; google-service.json</strong></p>
+<p> <img src="assets/07_novo_projeto_passo_7.png" alt=""></p>
+</li>
+<li><p>Na terceira etapa, basta seguir as instru&#xE7;&#xF5;es e adicionar os <strong>trechos de c&#xF3;digo</strong> na posi&#xE7;&#xE3;o desejada.</p>
+<ul>
+<li><p>Alterar o arquivo <strong>Android &#x2192; build.gradle</strong></p>
+<pre><code class="lang-js">  buildscript {
+      ext.kotlin_version = <span class="hljs-string">&apos;1.3.50&apos;</span>
+      repositories {
+          google()  <span class="hljs-comment">// Google&apos;s Maven repository</span>
+          jcenter()
+      }
+
+  dependencies {
+      classpath <span class="hljs-string">&apos;com.android.tools.build:gradle:3.5.0&apos;</span>
+      classpath <span class="hljs-string">&apos;com.google.gms:google-services:4.3.3&apos;</span> <span class="hljs-comment">// Add this line</span>
+      classpath <span class="hljs-string">&quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;</span>
+  }
+  }
+
+  allprojects {
+      repositories {
+          google()  <span class="hljs-comment">// Google&apos;s Maven repository</span>
+          jcenter()
+      }
+  }
+  ...
+</code></pre>
+</li>
+<li><p>Alterar o arquivo <strong>Android &#x2192; app &#x2192; build.gradle</strong></p>
+<pre><code class="lang-js">  ...
+  apply plugin: <span class="hljs-string">&apos;com.android.application&apos;</span>
+  apply plugin: <span class="hljs-string">&apos;com.google.gms.google-services&apos;</span>
+  ...
+      defaultConfig {
+          applicationId <span class="hljs-string">&quot;br.com.teste.dev&quot;</span>
+          minSdkVersion <span class="hljs-number">16</span>
+          targetSdkVersion <span class="hljs-number">28</span>
+          versionCode flutterVersionCode.toInteger()
+          versionName flutterVersionName
+          multiDexEnabled <span class="hljs-literal">true</span> <span class="hljs-comment">// Adicione esta linha</span>
+      }
+  ...
+
+  dependencies {
+      <span class="hljs-comment">// add the Firebase SDK for Google Analytics</span>
+      implementation <span class="hljs-string">&apos;com.google.firebase:firebase-analytics:17.2.2&apos;</span>
+      implementation <span class="hljs-string">&quot;org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version&quot;</span>
+  }
+  ...
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Por fim, para concluir esta etapa, basta clicar em <strong>Pular etapa</strong> vamos fazer mais algumas configura&#xE7;&#xF5;es para conseguir realizar o login com google.</p>
+<p> <img src="assets/07_novo_projeto_passo_7.png" alt=""></p>
+</li>
+</ol>
+<h2 id="configura&#xE7;&#xF5;es-para-o-google-login">Configura&#xE7;&#xF5;es para o Google Login</h2>
+<ol>
+<li><p>V&#xE1; para <strong>P&#xE1;gina de autentica&#xE7;&#xE3;o</strong> e clique em <strong>Configurar m&#xE9;todo de login</strong></p>
+<p> <img src="assets/01._configurar_metodo_login.png" alt=""></p>
+</li>
+<li><p>N&#xE1; p&#xE1;gina <strong>Provedores de login</strong> temos que ativar o Google Login e prencher o nome p&#xFA;blico do projeto e o email de suporte do projeto. Em seguida clicar em Salvar</p>
+<p> <img src="assets/02._configurar_metodo_login.png" alt=""></p>
+</li>
+<li><p>Precisamos preencher configurar o consentimento do OAuth, para isso acesse este <a href="https://console.developers.google.com/apis/credentials/consent" target="_blank">Link</a>. Verifique no canto superior esquerdo, se <strong>seu projeto</strong> foi selecionado, escolha externo e clique em <strong>Criar</strong></p>
+<p> <img src="assets/03._configurar_metodo_login.png" alt=""></p>
+</li>
+<li><p>Preencha o formul&#xE1;rio de <strong>Consentimento OAuth</strong> precisamos preencher o E-mail para suporte, e os links: (<strong>Link da p&#xE1;gina inicial do aplicativo</strong>, <strong>Link da Pol&#xED;tica de Privacidade do aplicativo</strong>, <strong>Link dos Termos de Servi&#xE7;o do aplicativo</strong>), devemos preencher esses dados com o mesmo link exibido no <strong>Dom&#xED;nios autorizados</strong> que dever ser o <strong>nomeDoSeuProjeto.firebaseapp.com</strong> e clique em salvar.</p>
+<p> <img src="assets/04._configurar_metodo_login.png" alt=""></p>
+</li>
+</ol>
+<ol>
+<li><p>Por &#xFA;ltimo mas n&#xE3;o menos importante precisamos dizer para seu app utilizar o arquivo <code>app-teste-debug.keystore</code> configurado anteriormente. </p>
+<ul>
+<li>Para isso vamos criar o <code>key.properties</code> arquivo no diretorio <strong>Android &#x2192; key.properties</strong> esse arquivo tera o seguinte conte&#xFA;do.<pre><code>  storePassword=suaSenha
+  keyPassword=suaSenha
+  keyAlias=app-teste-debug
+  storeFile=/caminho/do/seu/app-teste-debug.keystore
+</code></pre></li>
+<li><p>Alterar o arquivo <strong>Android &#x2192; app &#x2192; build.gradle</strong> e adicionar a configura&#xE7;&#xE3;o do <strong>key.properties</strong>.</p>
+<pre><code class="lang-js">  ...
+  def keystorePropertiesFile = rootProject.file(<span class="hljs-string">&quot;key.properties&quot;</span>)
+  def keystoreProperties = <span class="hljs-keyword">new</span> Properties()
+  keystoreProperties.load(<span class="hljs-keyword">new</span> FileInputStream(keystorePropertiesFile))
+
+  android {
+      ...
+
+      signingConfigs {
+          debug {
+              keyAlias keystoreProperties[<span class="hljs-string">&apos;keyAlias&apos;</span>]
+              keyPassword keystoreProperties[<span class="hljs-string">&apos;keyPassword&apos;</span>]
+              storeFile file(keystoreProperties[<span class="hljs-string">&apos;storeFile&apos;</span>])
+              storePassword keystoreProperties[<span class="hljs-string">&apos;storePassword&apos;</span>]
+          }
+
+          release {
+              keyAlias keystoreProperties[<span class="hljs-string">&apos;keyAlias&apos;</span>]
+              keyPassword keystoreProperties[<span class="hljs-string">&apos;keyPassword&apos;</span>]
+              storeFile file(keystoreProperties[<span class="hljs-string">&apos;storeFile&apos;</span>])
+              storePassword keystoreProperties[<span class="hljs-string">&apos;storePassword&apos;</span>]
+          }
+      }
+
+      buildTypes {
+          debug {
+              signingConfig signingConfigs.debug
+          }
+
+          release {
+              ...
+              signingConfig signingConfigs.release
+              ...
+          }
+      }
+  ...
+</code></pre>
+</li>
+<li>Finalmente podemos testar o login com google.</li>
+</ul>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="flavor.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Flavor">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Firebase Android (Login Google)","level":"1.3","depth":1,"previous":{"title":"Flavor","level":"1.2","depth":1,"path":"flavor.md","ref":"flavor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"firebase_android.md","mtime":"2020-05-19T21:54:06.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-19T21:59:04.871Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
