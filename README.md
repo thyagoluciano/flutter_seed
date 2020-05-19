@@ -61,3 +61,15 @@ This project flavor is basead in: https://bit.ly/2LtU4xD
 ## DDD
 
 ### Freezed : flutter pub run build_runner watch
+
+
+
+
+Android
+Para ativar o modo de depuração do Google Analytics em um dispositivo Android emulado, execute a seguinte linha de comando:
+
+adb shell setprop debug.firebase.analytics.app <package_name>
+
+O modo de depuração permanecerá ativo até você executar a seguinte linha de comando:
+
+adb shell setprop debug.firebase.analytics.app .none.
